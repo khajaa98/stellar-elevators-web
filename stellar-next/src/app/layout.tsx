@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import FloatingCTA from "@/components/ui/FloatingCTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://stellarelevators.com'), // Replace with actual domain later
@@ -49,6 +46,8 @@ export const metadata: Metadata = {
   },
 };
 
+import UILayout from "@/components/layout/UILayout";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,12 +56,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-[#1A1A1A] text-white antialiased selection:bg-[#2E3192] selection:text-white min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
+        <UILayout>
           {children}
-        </main>
-        <Footer />
-        <FloatingCTA />
+        </UILayout>
       </body>
     </html>
   );
