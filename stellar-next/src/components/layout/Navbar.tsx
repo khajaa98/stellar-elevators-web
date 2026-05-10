@@ -29,14 +29,19 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Auto-close menu on navigation
   useEffect(() => {
     setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-  }, [pathname, isMobileMenuOpen]);
+  }, [isMobileMenuOpen]);
 
   return (
     <header
