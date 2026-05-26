@@ -14,7 +14,7 @@ export default function AboutContent() {
         image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop"
       />
       
-      <section className="py-24 md:py-48 bg-[#1A1A1A] text-white">
+      <section className="py-24 md:py-48 bg-stellar-light-bg text-stellar-charcoal">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <motion.div 
@@ -25,13 +25,13 @@ export default function AboutContent() {
               className="relative aspect-[4/5] overflow-hidden shadow-2xl"
             >
               <Image 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000&auto=format&fit=crop" 
                 alt="Founder of Stellar Elevators Hyderabad" 
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               />
               <div className="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/95 to-transparent">
-                <h3 className="font-display text-2xl font-bold">Mr. Shabbir Mohammed</h3>
+                <h3 className="font-display text-2xl font-bold text-white">Mr. Shabbir Mohammed</h3>
                 <p className="text-[#2E3192] text-xs uppercase tracking-[0.3em] font-bold mt-2">Founder & CEO</p>
               </div>
             </motion.div>
@@ -47,7 +47,7 @@ export default function AboutContent() {
                 Engineering with a <br />
                 <span className="text-[#2E3192] italic">Human Touch</span>
               </h2>
-              <div className="space-y-8 text-[#C7C7C7] font-light text-xl leading-relaxed">
+              <div className="space-y-8 text-stellar-gray font-light text-xl leading-relaxed">
                 <p>
                   Stellar Elevators was established in 2019 in Hyderabad with a vision to redefine vertical mobility. We recognized a gap for solutions that combined world-class engineering precision with localized, responsive service.
                 </p>

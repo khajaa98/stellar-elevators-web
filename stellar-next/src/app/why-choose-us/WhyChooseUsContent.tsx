@@ -24,7 +24,7 @@ export default function WhyChooseUsContent() {
         image="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1920&auto=format&fit=crop"
       />
       
-      <section className="py-24 md:py-48 bg-[#1A1A1A] text-white">
+      <section className="py-24 md:py-48 bg-stellar-light-bg text-stellar-charcoal">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <motion.div
@@ -38,7 +38,7 @@ export default function WhyChooseUsContent() {
                 Elevating Standards <br />
                 <span className="text-[#2E3192] italic">Every Day</span>
               </h2>
-              <p className="text-[#C7C7C7] font-light text-xl leading-relaxed mb-16 max-w-xl">
+              <p className="text-stellar-gray font-light text-xl leading-relaxed mb-16 max-w-xl">
                 Choosing an elevator partner is a long-term commitment. At Stellar Elevators, we build relationships as strong as our engineering.
               </p>
               
@@ -55,7 +55,7 @@ export default function WhyChooseUsContent() {
                     <CheckCircle2 size={24} className="text-[#2E3192]" />
                     <div>
                       <h4 className="font-display font-bold text-lg mb-3 tracking-tight">{reason.title}</h4>
-                      <p className="text-[#C7C7C7]/60 text-sm font-light leading-relaxed">{reason.desc}</p>
+                      <p className="text-stellar-gray text-sm font-light leading-relaxed">{reason.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -75,7 +75,7 @@ export default function WhyChooseUsContent() {
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               />
-              <div className="absolute inset-0 border border-white/5 m-8 pointer-events-none" />
+              <div className="absolute inset-0 border border-black/5 m-8 pointer-events-none" />
             </motion.div>
           </div>
         </div>

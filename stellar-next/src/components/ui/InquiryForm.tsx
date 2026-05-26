@@ -38,8 +38,8 @@ export default function InquiryForm() {
       toast.success('Your brief has been received. Our team will contact you shortly.', {
         duration: 5000,
         style: {
-          background: '#1A1A1A',
-          color: '#fff',
+          background: '#FFFFFF',
+          color: '#1A1A1A',
           border: '1px solid #2E3192',
           fontFamily: 'var(--font-display)',
           fontSize: '14px',
@@ -51,8 +51,8 @@ export default function InquiryForm() {
     } catch (error) {
       toast.error('Something went wrong. Please try again or call us directly.', {
         style: {
-          background: '#1A1A1A',
-          color: '#fff',
+          background: '#FFFFFF',
+          color: '#1A1A1A',
           border: '1px solid #ff4b4b',
         },
       });
@@ -68,24 +68,24 @@ export default function InquiryForm() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <label className="text-[10px] font-display uppercase tracking-[0.3em] text-[#C7C7C7]/40 font-bold flex justify-between">
+            <label className="text-[10px] font-display uppercase tracking-[0.3em] text-stellar-charcoal/50 font-bold flex justify-between">
               Name {errors.name && <span className="text-red-500 lowercase tracking-normal">({errors.name.message})</span>}
             </label>
             <input 
               {...register('name')}
               type="text" 
-              className={`w-full bg-transparent border-b ${errors.name ? 'border-red-500/50' : 'border-white/10'} focus:border-[#2E3192] outline-none py-4 text-white transition-all placeholder:text-white/10 uppercase text-sm`} 
+              className={`w-full bg-transparent border-b ${errors.name ? 'border-red-500/50' : 'border-black/10'} focus:border-[#2E3192] outline-none py-4 text-stellar-charcoal transition-all placeholder:text-stellar-charcoal/30 uppercase text-sm`} 
               placeholder="FULL NAME" 
             />
           </div>
           <div className="space-y-3">
-            <label className="text-[10px] font-display uppercase tracking-[0.3em] text-[#C7C7C7]/40 font-bold flex justify-between">
+            <label className="text-[10px] font-display uppercase tracking-[0.3em] text-stellar-charcoal/50 font-bold flex justify-between">
               Phone {errors.phone && <span className="text-red-500 lowercase tracking-normal">({errors.phone.message})</span>}
             </label>
             <input 
               {...register('phone')}
               type="tel" 
-              className={`w-full bg-transparent border-b ${errors.phone ? 'border-red-500/50' : 'border-white/10'} focus:border-[#2E3192] outline-none py-4 text-white transition-all placeholder:text-white/10 uppercase text-sm`} 
+              className={`w-full bg-transparent border-b ${errors.phone ? 'border-red-500/50' : 'border-black/10'} focus:border-[#2E3192] outline-none py-4 text-stellar-charcoal transition-all placeholder:text-stellar-charcoal/30 uppercase text-sm`} 
               placeholder="+91 00000 00000" 
             />
           </div>
@@ -93,39 +93,39 @@ export default function InquiryForm() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-3">
-            <label className="text-[10px] font-display uppercase tracking-[0.3em] text-[#C7C7C7]/40 font-bold flex justify-between">
+            <label className="text-[10px] font-display uppercase tracking-[0.3em] text-stellar-charcoal/50 font-bold flex justify-between">
               City {errors.city && <span className="text-red-500 lowercase tracking-normal">({errors.city.message})</span>}
             </label>
             <input 
               {...register('city')}
               type="text" 
-              className={`w-full bg-transparent border-b ${errors.city ? 'border-red-500/50' : 'border-white/10'} focus:border-[#2E3192] outline-none py-4 text-white transition-all placeholder:text-white/10 uppercase text-sm`} 
+              className={`w-full bg-transparent border-b ${errors.city ? 'border-red-500/50' : 'border-black/10'} focus:border-[#2E3192] outline-none py-4 text-stellar-charcoal transition-all placeholder:text-stellar-charcoal/30 uppercase text-sm`} 
               placeholder="YOUR CITY" 
             />
           </div>
           <div className="space-y-3">
-            <label className="text-[10px] font-display uppercase tracking-[0.3em] text-[#C7C7C7]/40 font-bold flex justify-between">
+            <label className="text-[10px] font-display uppercase tracking-[0.3em] text-stellar-charcoal/50 font-bold flex justify-between">
               Category {errors.project_type && <span className="text-red-500 lowercase tracking-normal">({errors.project_type.message})</span>}
             </label>
             <select 
               {...register('project_type')}
-              className={`w-full bg-transparent border-b ${errors.project_type ? 'border-red-500/50' : 'border-white/10'} focus:border-[#2E3192] outline-none py-4 text-white transition-all appearance-none cursor-pointer uppercase tracking-[0.2em] text-[10px] font-bold`}
+              className={`w-full bg-transparent border-b ${errors.project_type ? 'border-red-500/50' : 'border-black/10'} focus:border-[#2E3192] outline-none py-4 text-stellar-charcoal transition-all appearance-none cursor-pointer uppercase tracking-[0.2em] text-[10px] font-bold`}
             >
-              <option value="" className="bg-[#1A1A1A] text-[#C7C7C7]/40">SELECT CATEGORY</option>
-              <option value="new" className="bg-[#1A1A1A] text-white">NEW INSTALLATION</option>
-              <option value="maintenance" className="bg-[#1A1A1A] text-white">MAINTENANCE / AMC</option>
-              <option value="modernization" className="bg-[#1A1A1A] text-white">MODERNIZATION</option>
-              <option value="other" className="bg-[#1A1A1A] text-white">OTHER INQUIRY</option>
+              <option value="" className="bg-white text-stellar-gray">SELECT CATEGORY</option>
+              <option value="new" className="bg-white text-stellar-charcoal">NEW INSTALLATION</option>
+              <option value="maintenance" className="bg-white text-stellar-charcoal">MAINTENANCE / AMC</option>
+              <option value="modernization" className="bg-white text-stellar-charcoal">MODERNIZATION</option>
+              <option value="other" className="bg-white text-stellar-charcoal">OTHER INQUIRY</option>
             </select>
           </div>
         </div>
         
         <div className="space-y-3">
-          <label className="text-[10px] font-display uppercase tracking-[0.3em] text-[#C7C7C7]/40 font-bold">Message (Optional)</label>
+          <label className="text-[10px] font-display uppercase tracking-[0.3em] text-stellar-charcoal/50 font-bold">Message (Optional)</label>
           <textarea 
             {...register('message')}
             rows={4} 
-            className="w-full bg-transparent border-b border-white/10 focus:border-[#2E3192] outline-none py-4 text-white transition-all resize-none placeholder:text-white/10 uppercase text-sm" 
+            className="w-full bg-transparent border-b border-black/10 focus:border-[#2E3192] outline-none py-4 text-stellar-charcoal transition-all resize-none placeholder:text-stellar-charcoal/30 uppercase text-sm" 
             placeholder="BRIEF DESCRIPTION..."
           ></textarea>
         </div>

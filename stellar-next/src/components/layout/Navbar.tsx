@@ -46,7 +46,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${
-        isScrolled ? 'bg-[#1A1A1A]/95 backdrop-blur-xl py-5 shadow-2xl border-b border-white/5' : 'bg-transparent py-8 md:py-10'
+        isScrolled ? 'bg-stellar-light-bg/95 backdrop-blur-xl py-5 shadow-lg border-b border-black/5' : 'bg-transparent py-8 md:py-10'
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-8 md:px-12 flex items-center justify-between">
@@ -54,8 +54,8 @@ export default function Navbar() {
           <div className="w-7 h-7 md:w-9 md:h-9 bg-[#2E3192] rounded-sm flex items-center justify-center transform group-hover:rotate-45 transition-transform duration-700 shadow-lg">
             <div className="w-3 h-3 md:w-4 md:h-4 border-2 border-white rounded-sm transform -rotate-45 group-hover:rotate-0 transition-transform duration-700" />
           </div>
-          <span className="font-display font-bold text-base md:text-xl tracking-[0.2em] uppercase">
-            Stellar<span className="text-[#C7C7C7] font-light">Elevators</span>
+          <span className="font-display font-bold text-base md:text-xl tracking-[0.2em] uppercase text-stellar-charcoal">
+            Stellar<span className="text-stellar-gray font-light">Elevators</span>
           </span>
         </Link>
 
@@ -66,7 +66,7 @@ export default function Navbar() {
               key={link.name}
               href={link.path}
               className={`text-[10px] tracking-[0.22em] uppercase transition-all duration-500 hover:text-[#2E3192] relative group ${
-                pathname === link.path ? 'text-[#2E3192] font-bold' : 'text-[#C7C7C7]'
+                pathname === link.path ? 'text-[#2E3192] font-bold' : 'text-stellar-gray'
               }`}
             >
               {link.name}
@@ -80,7 +80,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-white w-10 h-10 flex items-center justify-center border border-white/10 rounded-full"
+          className="lg:hidden text-stellar-charcoal w-10 h-10 flex items-center justify-center border border-black/10 rounded-full"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -96,7 +96,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 bg-[#1A1A1A] z-[90] lg:hidden flex flex-col items-center justify-center"
+            className="fixed inset-0 bg-stellar-light-bg z-[90] lg:hidden flex flex-col items-center justify-center"
           >
             <nav className="flex flex-col items-center gap-10">
               {navLinks.map((link, i) => (
@@ -109,7 +109,7 @@ export default function Navbar() {
                   <Link
                     href={link.path}
                     className={`text-2xl tracking-[0.3em] uppercase font-display ${
-                      pathname === link.path ? 'text-[#2E3192] font-bold' : 'text-[#C7C7C7]'
+                      pathname === link.path ? 'text-[#2E3192] font-bold' : 'text-stellar-gray'
                     }`}
                   >
                     {link.name}

@@ -24,7 +24,7 @@ export default function TechnologyContent() {
         image="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=1920&auto=format&fit=crop"
       />
       
-      <section className="py-24 md:py-48 bg-[#1A1A1A] text-white">
+      <section className="py-24 md:py-48 bg-stellar-light-bg text-stellar-charcoal">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
             {technologies.map((tech, index) => (
@@ -34,13 +34,13 @@ export default function TechnologyContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
-                className="group p-10 border border-white/5 hover:border-[#2E3192]/50 bg-black/10 hover:bg-black/30 transition-all duration-700 shadow-xl"
+                className="group p-10 border border-black/5 hover:border-[#2E3192]/50 bg-white hover:bg-neutral-50 transition-all duration-700 shadow-xl"
               >
-                <div className="w-16 h-16 rounded-sm border border-white/5 flex items-center justify-center text-[#2E3192] group-hover:bg-[#2E3192] group-hover:text-white transition-all duration-700 mb-10">
+                <div className="w-16 h-16 rounded-sm border border-black/5 flex items-center justify-center text-[#2E3192] group-hover:bg-[#2E3192] group-hover:text-white transition-all duration-700 mb-10">
                   <tech.icon size={32} />
                 </div>
                 <h3 className="font-display text-2xl font-bold mb-6 tracking-tight">{tech.title}</h3>
-                <p className="text-[#C7C7C7] font-light text-lg leading-relaxed">
+                <p className="text-stellar-gray font-light text-lg leading-relaxed">
                   {tech.desc}
                 </p>
               </motion.div>

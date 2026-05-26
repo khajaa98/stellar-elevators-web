@@ -24,7 +24,7 @@ export default function ProjectsContent() {
         image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop"
       />
       
-      <section className="py-24 md:py-48 bg-[#1A1A1A] text-white">
+      <section className="py-24 md:py-48 bg-stellar-light-bg text-stellar-charcoal">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
             {projects.map((project, index) => (
@@ -51,12 +51,12 @@ export default function ProjectsContent() {
                 <div className="flex justify-between items-end">
                   <div>
                     <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-[#2E3192] transition-colors duration-500">{project.title}</h3>
-                    <div className="flex items-center gap-3 text-[#C7C7C7]/60 text-sm font-light">
+                    <div className="flex items-center gap-3 text-stellar-gray text-sm font-light">
                       <MapPin size={16} className="text-[#2E3192]" />
                       {project.location}
                     </div>
                   </div>
-                  <ChevronRight size={28} className="text-[#C7C7C7]/10 group-hover:text-[#2E3192] group-hover:translate-x-3 transition-all duration-700" />
+                  <ChevronRight size={28} className="text-black/10 group-hover:text-[#2E3192] group-hover:translate-x-3 transition-all duration-700" />
                 </div>
               </motion.div>
             ))}

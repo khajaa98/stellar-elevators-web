@@ -28,7 +28,7 @@ export default function FloatingCTA() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.5, y: 20 }}
             onClick={scrollToTop}
-            className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-[#2E3192] transition-all duration-300 shadow-2xl"
+            className="w-12 h-12 bg-stellar-light-bg/80 backdrop-blur-md border border-black/10 rounded-full flex items-center justify-center text-stellar-charcoal hover:bg-[#2E3192] hover:text-white transition-all duration-300 shadow-xl"
             aria-label="Scroll to top"
           >
             <ArrowUp size={20} />

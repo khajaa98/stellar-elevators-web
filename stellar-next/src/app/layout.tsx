@@ -55,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-[#1A1A1A] text-white antialiased selection:bg-[#2E3192] selection:text-white min-h-screen flex flex-col">
+      <body className="bg-stellar-light-bg text-stellar-charcoal antialiased selection:bg-[#2E3192] selection:text-white min-h-screen flex flex-col">
         <UILayout>
           {children}
         </UILayout>

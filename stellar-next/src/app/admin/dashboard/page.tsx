@@ -114,38 +114,38 @@ export default function AdminDashboard() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'new': return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
-      case 'contacted': return 'text-amber-400 bg-amber-400/10 border-amber-400/20';
-      case 'closed': return 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20';
-      default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+      case 'new': return 'text-blue-700 bg-blue-50 border-blue-200';
+      case 'contacted': return 'text-amber-700 bg-amber-50 border-amber-200';
+      case 'closed': return 'text-emerald-700 bg-emerald-50 border-emerald-200';
+      default: return 'text-gray-700 bg-gray-50 border-gray-200';
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#1A1A1A] text-white">
+    <div className="min-h-screen bg-[#F4F4F6] text-stellar-charcoal">
       <Toaster position="top-right" />
       
       {/* Sidebar / Header */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/5 py-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-black/5 py-4 shadow-sm">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 bg-[#2E3192] rounded-sm flex items-center justify-center">
               <div className="w-5 h-5 border-2 border-white rounded-sm" />
             </div>
             <div>
-              <h1 className="font-display font-bold text-lg tracking-widest uppercase">Terminal</h1>
-              <p className="text-[10px] text-[#C7C7C7]/40 uppercase tracking-[0.2em]">Lead Management System</p>
+              <h1 className="font-display font-bold text-lg tracking-widest uppercase text-stellar-charcoal">Terminal</h1>
+              <p className="text-[10px] text-stellar-gray uppercase tracking-[0.2em]">Lead Management System</p>
             </div>
           </div>
 
           <div className="flex items-center gap-6">
-            <div className="hidden lg:flex items-center gap-3 pr-6 border-r border-white/10">
+            <div className="hidden lg:flex items-center gap-3 pr-6 border-r border-black/10">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[10px] uppercase tracking-widest text-[#C7C7C7]/60">System Online</span>
+              <span className="text-[10px] uppercase tracking-widest text-stellar-gray">System Online</span>
             </div>
             <button 
               onClick={handleLogout}
-              className="flex items-center gap-2 text-[10px] md:text-xs font-display uppercase tracking-widest text-[#C7C7C7] hover:text-white transition-colors group"
+              className="flex items-center gap-2 text-[10px] md:text-xs font-display uppercase tracking-widest text-stellar-gray hover:text-[#2E3192] transition-colors group"
             >
               <span className="hidden sm:inline">Logout</span> <LogOut size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
@@ -157,35 +157,35 @@ export default function AdminDashboard() {
         {/* Controls */}
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 mb-12">
           <div className="relative flex-grow">
-            <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-[#C7C7C7]/20" size={18} />
+            <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-black/30" size={18} />
             <input 
               type="text" 
               placeholder="Search leads..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-black/20 border border-white/5 focus:border-[#2E3192]/50 outline-none py-4 pl-16 pr-6 text-sm tracking-wide transition-all placeholder:text-[#C7C7C7]/20"
+              className="w-full bg-white border border-black/10 focus:border-[#2E3192] outline-none py-4 pl-16 pr-6 text-sm tracking-wide text-stellar-charcoal transition-all placeholder:text-black/30 shadow-sm"
             />
           </div>
           
           <div className="flex gap-4">
             <div className="relative flex-grow md:min-w-[200px]">
-              <Filter className="absolute left-6 top-1/2 -translate-y-1/2 text-[#C7C7C7]/20" size={18} />
+              <Filter className="absolute left-6 top-1/2 -translate-y-1/2 text-black/30" size={18} />
               <select 
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="w-full bg-black/20 border border-white/5 focus:border-[#2E3192]/50 outline-none py-4 pl-16 pr-10 text-xs font-display uppercase tracking-widest appearance-none cursor-pointer"
+                className="w-full bg-white border border-black/10 focus:border-[#2E3192] outline-none py-4 pl-16 pr-10 text-xs font-display uppercase tracking-widest appearance-none cursor-pointer text-stellar-charcoal shadow-sm"
               >
-                <option value="all">All Status</option>
-                <option value="new">New</option>
-                <option value="contacted">Progress</option>
-                <option value="closed">Closed</option>
+                <option value="all" className="bg-white text-stellar-charcoal">All Status</option>
+                <option value="new" className="bg-white text-stellar-charcoal">New</option>
+                <option value="contacted" className="bg-white text-stellar-charcoal">Progress</option>
+                <option value="closed" className="bg-white text-stellar-charcoal">Closed</option>
               </select>
-              <ChevronDown size={14} className="absolute right-6 top-1/2 -translate-y-1/2 text-[#C7C7C7]/20 pointer-events-none" />
+              <ChevronDown size={14} className="absolute right-6 top-1/2 -translate-y-1/2 text-black/30 pointer-events-none" />
             </div>
             
             <button 
               onClick={fetchInquiries}
-              className="px-6 md:px-8 bg-white/5 border border-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+              className="px-6 md:px-8 bg-white border border-black/10 text-stellar-charcoal hover:bg-neutral-50 transition-colors flex items-center justify-center shadow-sm"
               title="Refresh Data"
             >
               <Clock size={18} className={isLoading ? 'animate-spin' : ''} />
@@ -194,19 +194,19 @@ export default function AdminDashboard() {
         </div>
 
         {/* Table / Grid */}
-        <div className="bg-black/20 border border-white/5 relative overflow-hidden">
+        <div className="bg-white border border-black/5 relative overflow-hidden shadow-md">
           {isLoading ? (
             <div className="h-96 flex flex-col items-center justify-center gap-4">
               <Loader2 size={40} className="animate-spin text-[#2E3192]" />
-              <p className="text-xs uppercase tracking-[0.4em] text-[#C7C7C7]/40">Scanning Database...</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-stellar-gray">Scanning Database...</p>
             </div>
           ) : filteredInquiries.length === 0 ? (
             <div className="h-96 flex flex-col items-center justify-center text-center px-6">
-              <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-6">
-                <Search size={24} className="text-[#C7C7C7]/20" />
+              <div className="w-16 h-16 rounded-full bg-black/5 flex items-center justify-center mb-6">
+                <Search size={24} className="text-black/20" />
               </div>
               <h3 className="font-display text-xl font-bold uppercase tracking-widest mb-2">No Records Found</h3>
-              <p className="text-[#C7C7C7]/40 text-sm font-light">Adjust your search parameters or check back later.</p>
+              <p className="text-stellar-gray text-sm font-light">Adjust your search parameters or check back later.</p>
             </div>
           ) : (
             <>
@@ -220,26 +220,26 @@ export default function AdminDashboard() {
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.95 }}
-                      className="p-6 bg-white/[0.02] border border-white/5 space-y-6"
+                      className="p-6 bg-white border-b border-black/5 space-y-6"
                     >
                       <div className="flex justify-between items-start">
                         <div>
-                          <h3 className="font-display font-bold text-lg mb-1">{inv.name}</h3>
+                          <h3 className="font-display font-bold text-lg mb-1 text-stellar-charcoal">{inv.name}</h3>
                           <div className="flex flex-col gap-2">
-                            <a href={`tel:${inv.phone}`} className="text-xs text-[#C7C7C7]/40 flex items-center gap-2">
+                            <a href={`tel:${inv.phone}`} className="text-xs text-stellar-gray hover:text-[#2E3192] flex items-center gap-2 transition-colors">
                               <Phone size={12} /> {inv.phone}
                             </a>
-                            <div className="text-[10px] text-[#C7C7C7]/40 uppercase tracking-widest flex items-center gap-2">
+                            <div className="text-[10px] text-stellar-gray uppercase tracking-widest flex items-center gap-2">
                               <MapPin size={10} /> {inv.city} &bull; {inv.project_type}
                             </div>
                           </div>
                         </div>
-                        <div className="text-[10px] text-[#C7C7C7]/20 font-bold uppercase tracking-widest">
+                        <div className="text-[10px] text-stellar-gray/65 font-bold uppercase tracking-widest">
                           {new Date(inv.created_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' })}
                         </div>
                       </div>
 
-                      <div className="flex items-center justify-between gap-4 pt-4 border-t border-white/5">
+                      <div className="flex items-center justify-between gap-4 pt-4 border-t border-black/5">
                         <select 
                           value={inv.status}
                           onChange={(e) => handleStatusUpdate(inv.id, e.target.value)}
@@ -253,19 +253,19 @@ export default function AdminDashboard() {
                         <div className="flex gap-2">
                           <button 
                             onClick={() => toast((t) => (
-                              <div className="p-4">
+                              <div className="p-4 bg-white text-stellar-charcoal">
                                 <p className="mb-4 text-sm font-display uppercase tracking-widest font-bold">Message Brief:</p>
-                                <p className="text-sm font-light text-[#C7C7C7]">{inv.message || 'No additional details provided.'}</p>
+                                <p className="text-sm font-light text-stellar-charcoal">{inv.message || 'No additional details provided.'}</p>
                               </div>
                             ), { duration: 6000 })}
-                            className="w-10 h-10 rounded-sm border border-white/5 flex items-center justify-center bg-white/5"
+                            className="w-10 h-10 rounded-sm border border-black/10 flex items-center justify-center hover:bg-black/5 transition-colors"
                           >
-                            <ExternalLink size={16} className="text-[#C7C7C7]/40" />
+                            <ExternalLink size={16} className="text-stellar-gray" />
                           </button>
                           <button 
                             onClick={() => confirm('Purge lead?') && handleDelete(inv.id)}
                             disabled={isDeletingId === inv.id}
-                            className="w-10 h-10 rounded-sm border border-white/5 flex items-center justify-center text-red-500/40"
+                            className="w-10 h-10 rounded-sm border border-black/10 flex items-center justify-center text-red-500/60 hover:bg-red-50 transition-colors"
                           >
                             {isDeletingId === inv.id ? <Loader2 size={16} className="animate-spin" /> : <Trash2 size={16} />}
                           </button>
@@ -280,15 +280,15 @@ export default function AdminDashboard() {
               <div className="hidden md:block overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-white/5 bg-white/[0.02]">
-                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-[#C7C7C7]/40">Client Info</th>
-                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-[#C7C7C7]/40">Project / City</th>
-                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-[#C7C7C7]/40">Status</th>
-                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-[#C7C7C7]/40">Received</th>
-                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-[#C7C7C7]/40 text-right">Actions</th>
+                  <tr className="border-b border-black/5 bg-neutral-50">
+                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-stellar-gray">Client Info</th>
+                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-stellar-gray">Project / City</th>
+                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-stellar-gray">Status</th>
+                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-stellar-gray">Received</th>
+                    <th className="py-6 px-8 text-[10px] uppercase tracking-[0.2em] font-bold text-stellar-gray text-right">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5">
+                <tbody className="divide-y divide-black/5">
                   <AnimatePresence mode="popLayout">
                     {filteredInquiries.map((inv) => (
                       <motion.tr 
@@ -297,13 +297,13 @@ export default function AdminDashboard() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0, x: -20 }}
-                        className="group hover:bg-white/[0.01] transition-colors"
+                        className="group hover:bg-neutral-50/50 transition-colors border-b border-black/5"
                       >
                         <td className="py-8 px-8">
                           <div className="flex flex-col gap-1">
-                            <span className="font-display font-bold text-lg">{inv.name}</span>
+                            <span className="font-display font-bold text-lg text-stellar-charcoal">{inv.name}</span>
                             <div className="flex items-center gap-4 mt-1">
-                              <a href={`tel:${inv.phone}`} className="text-xs text-[#C7C7C7]/40 hover:text-[#2E3192] flex items-center gap-2 transition-colors">
+                              <a href={`tel:${inv.phone}`} className="text-xs text-stellar-gray hover:text-[#2E3192] flex items-center gap-2 transition-colors">
                                 <Phone size={12} /> {inv.phone}
                               </a>
                             </div>
@@ -311,8 +311,8 @@ export default function AdminDashboard() {
                         </td>
                         <td className="py-8 px-8">
                           <div className="flex flex-col gap-1">
-                            <span className="text-xs uppercase tracking-widest font-bold text-white/80">{inv.project_type}</span>
-                            <div className="flex items-center gap-2 text-[10px] text-[#C7C7C7]/40 tracking-wider">
+                            <span className="text-xs uppercase tracking-widest font-bold text-stellar-charcoal">{inv.project_type}</span>
+                            <div className="flex items-center gap-2 text-[10px] text-stellar-gray tracking-wider">
                               <MapPin size={10} /> {inv.city}
                             </div>
                           </div>
@@ -329,7 +329,7 @@ export default function AdminDashboard() {
                           </select>
                         </td>
                         <td className="py-8 px-8">
-                          <div className="text-[10px] text-[#C7C7C7]/40 tracking-widest uppercase">
+                          <div className="text-[10px] text-stellar-gray tracking-widest uppercase">
                             {new Date(inv.created_at).toLocaleDateString('en-IN', {
                               day: '2-digit',
                               month: 'short',
@@ -341,15 +341,15 @@ export default function AdminDashboard() {
                           <div className="flex items-center justify-end gap-3">
                             <button 
                               onClick={() => toast((t) => (
-                                <div className="p-4">
+                                <div className="p-4 bg-white text-stellar-charcoal">
                                   <p className="mb-4 text-sm font-display uppercase tracking-widest font-bold">Message Brief:</p>
-                                  <p className="text-sm font-light text-[#C7C7C7]">{inv.message || 'No additional details provided.'}</p>
+                                  <p className="text-sm font-light text-stellar-charcoal">{inv.message || 'No additional details provided.'}</p>
                                 </div>
                               ), { duration: 6000 })}
-                              className="w-10 h-10 rounded-sm border border-white/5 flex items-center justify-center hover:bg-white/5 transition-colors"
+                              className="w-10 h-10 rounded-sm border border-black/10 flex items-center justify-center hover:bg-neutral-100 transition-colors"
                               title="View Brief"
                             >
-                              <ExternalLink size={16} className="text-[#C7C7C7]/40" />
+                              <ExternalLink size={16} className="text-stellar-gray" />
                             </button>
                             <button 
                               onClick={() => {
@@ -358,7 +358,7 @@ export default function AdminDashboard() {
                                 }
                               }}
                               disabled={isDeletingId === inv.id}
-                              className="w-10 h-10 rounded-sm border border-white/5 flex items-center justify-center hover:bg-red-500/20 hover:border-red-500/30 transition-colors text-red-500/40 hover:text-red-500"
+                              className="w-10 h-10 rounded-sm border border-black/10 flex items-center justify-center hover:bg-red-50 transition-colors text-red-500/60 hover:text-red-500"
                               title="Delete Record"
                             >
                               {isDeletingId === inv.id ? <Loader2 size={16} className="animate-spin" /> : <Trash2 size={16} />}

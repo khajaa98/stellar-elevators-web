@@ -7,14 +7,16 @@
 
   --color-stellar-blue: #2E3192;
   --color-stellar-charcoal: #1A1A1A;
-  --color-stellar-gray: #C7C7C7;
+  --color-stellar-gray: #6E6E73;
   --color-stellar-white: #FFFFFF;
+  --color-stellar-light-bg: #FAF9F6;
+  --color-stellar-light-card: #FFFFFF;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-stellar-charcoal);
-  color: var(--color-stellar-white);
+  background-color: var(--color-stellar-light-bg);
+  color: var(--color-stellar-charcoal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,10 +30,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-stellar-charcoal);
+  background: var(--color-stellar-light-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(199, 199, 199, 0.3);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {

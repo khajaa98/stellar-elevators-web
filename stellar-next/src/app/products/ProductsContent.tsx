@@ -24,7 +24,7 @@ export default function ProductsContent() {
         image="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1920&auto=format&fit=crop"
       />
       
-      <section className="py-24 md:py-48 bg-[#1A1A1A] text-white">
+      <section className="py-24 md:py-48 bg-stellar-light-bg text-stellar-charcoal">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {products.map((product, index) => (

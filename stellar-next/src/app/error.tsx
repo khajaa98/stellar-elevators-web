@@ -16,7 +16,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-screen bg-[#1A1A1A] flex flex-col items-center justify-center p-6 text-center">
+    <div className="min-h-screen bg-stellar-light-bg flex flex-col items-center justify-center p-6 text-center text-stellar-charcoal">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -25,10 +25,10 @@ export default function Error({
         <div className="w-20 h-20 bg-red-500/10 rounded-sm flex items-center justify-center mx-auto mb-8 border border-red-500/20">
           <AlertTriangle size={32} className="text-red-500" />
         </div>
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-4 uppercase tracking-wider">
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-stellar-charcoal mb-4 uppercase tracking-wider">
           System Interruption
         </h2>
-        <p className="text-[#C7C7C7] font-light mb-12 text-lg leading-relaxed">
+        <p className="text-stellar-gray font-light mb-12 text-lg leading-relaxed">
           An unexpected error has occurred while processing your request. Our engineering team has been notified.
         </p>
         

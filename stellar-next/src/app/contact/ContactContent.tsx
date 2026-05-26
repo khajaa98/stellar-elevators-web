@@ -15,7 +15,7 @@ export default function ContactContent() {
         image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop"
       />
       
-      <section className="py-24 md:py-48 bg-[#1A1A1A] text-white">
+      <section className="py-24 md:py-48 bg-stellar-light-bg text-stellar-charcoal">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <motion.div
@@ -29,18 +29,18 @@ export default function ContactContent() {
                 Let&apos;s Discuss Your <br />
                 <span className="text-[#2E3192] italic">Vision</span>
               </h2>
-              <p className="text-[#C7C7C7] font-light text-xl leading-relaxed mb-16 max-w-lg">
+              <p className="text-stellar-gray font-light text-xl leading-relaxed mb-16 max-w-lg">
                 Whether you need a new installation or modernization, our team provides tailored engineering solutions.
               </p>
               
               <div className="space-y-12">
                 <div className="flex items-start gap-8 group">
-                  <div className="w-14 h-14 rounded-sm border border-white/5 flex items-center justify-center text-[#2E3192] group-hover:bg-[#2E3192] group-hover:text-white transition-all duration-500 shrink-0 shadow-xl">
+                  <div className="w-14 h-14 rounded-sm border border-black/5 flex items-center justify-center text-[#2E3192] group-hover:bg-[#2E3192] group-hover:text-white transition-all duration-500 shrink-0 shadow-xl">
                     <MapPin size={28} />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-xl mb-3 uppercase tracking-widest text-[#C7C7C7]">Corporate Headquarters</h4>
-                    <p className="text-[#C7C7C7]/60 font-light text-lg leading-relaxed">
+                    <h4 className="font-display font-bold text-xl mb-3 uppercase tracking-widest text-stellar-charcoal">Corporate Headquarters</h4>
+                    <p className="text-stellar-gray font-light text-lg leading-relaxed">
                       Plot no-15, H.No 6-252/1, 1st Floor<br />
                       Suchitra, Hyderabad, Telangana 500067
                     </p>
@@ -48,12 +48,12 @@ export default function ContactContent() {
                 </div>
                 
                 <div className="flex items-start gap-8 group">
-                  <div className="w-14 h-14 rounded-sm border border-white/5 flex items-center justify-center text-[#2E3192] group-hover:bg-[#2E3192] group-hover:text-white transition-all duration-500 shrink-0 shadow-xl">
+                  <div className="w-14 h-14 rounded-sm border border-black/5 flex items-center justify-center text-[#2E3192] group-hover:bg-[#2E3192] group-hover:text-white transition-all duration-500 shrink-0 shadow-xl">
                     <Phone size={28} />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-xl mb-3 uppercase tracking-widest text-[#C7C7C7]">Direct Contact</h4>
-                    <a href="tel:+919490944220" className="text-[#C7C7C7]/60 font-light text-2xl hover:text-white transition-colors block mb-2">
+                    <h4 className="font-display font-bold text-xl mb-3 uppercase tracking-widest text-stellar-charcoal">Direct Contact</h4>
+                    <a href="tel:+919490944220" className="text-stellar-gray font-light text-2xl hover:text-[#2E3192] transition-colors block mb-2">
                       +91 94909 44220
                     </a>
                     <span className="text-[10px] text-[#2E3192] uppercase tracking-[0.3em] font-bold">Available Mon-Sat, 9AM to 6PM</span>
@@ -61,12 +61,12 @@ export default function ContactContent() {
                 </div>
                 
                 <div className="flex items-start gap-8 group">
-                  <div className="w-14 h-14 rounded-sm border border-white/5 flex items-center justify-center text-[#2E3192] group-hover:bg-[#2E3192] group-hover:text-white transition-all duration-500 shrink-0 shadow-xl">
+                  <div className="w-14 h-14 rounded-sm border border-black/5 flex items-center justify-center text-[#2E3192] group-hover:bg-[#2E3192] group-hover:text-white transition-all duration-500 shrink-0 shadow-xl">
                     <Mail size={28} />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-xl mb-3 uppercase tracking-widest text-[#C7C7C7]">Email Correspondence</h4>
-                    <a href="mailto:info@stellarelevators.com" className="text-[#C7C7C7]/60 font-light text-2xl hover:text-white transition-colors block mb-2">
+                    <h4 className="font-display font-bold text-xl mb-3 uppercase tracking-widest text-stellar-charcoal">Email Correspondence</h4>
+                    <a href="mailto:info@stellarelevators.com" className="text-stellar-gray font-light text-2xl hover:text-[#2E3192] transition-colors block mb-2">
                       info@stellarelevators.com
                     </a>
                     <span className="text-[10px] text-[#2E3192] uppercase tracking-[0.3em] font-bold">Responds within 24 hours</span>
@@ -80,10 +80,10 @@ export default function ContactContent() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="bg-black/40 border border-white/5 p-12 md:p-20 shadow-2xl relative overflow-hidden group"
+              className="bg-white border border-black/5 p-12 md:p-20 shadow-2xl relative overflow-hidden group"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-[#2E3192] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000" />
-              <h3 className="font-display text-3xl font-bold mb-12">Project Brief</h3>
+              <h3 className="font-display text-3xl font-bold mb-12 text-stellar-charcoal">Project Brief</h3>
               <InquiryForm />
             </motion.div>
           </div>
